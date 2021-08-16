@@ -1,22 +1,37 @@
 #include <iostream>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 #include <stdio.h>
 
 using namespace std;
+
+class farmacia
+{	
+	public: 
+		int escolha;
+		char cliente[100], fornecedor[100];
+		string remedio[];
+		
+		
+};
+
+
+
+
+
+
+
+
 int main()
 
-{ 		
-	int escolha;
-	char cliente[100], fornecedor[100];
+{ 
+	farmacia carvalho;
 	string remedio[]={"dorflex", "dipirona", "neusadina", "paracetamol"};
-
     cout <<"Bem vindo a Farmacia" <<endl;
     cout <<"Coloque seu nome para ser adicionado ao sitema..:" <<endl;
-    cin.getline(cliente,100);
+    cin.getline(carvalho.cliente,100);
     system ("cls");
-    cout <<"Bom dia Senhor(a) " << cliente <<endl;
+    cout <<"Bom dia Senhor(a) " << carvalho.cliente <<endl;
     
     cout <<"Liste aqui os remedios desejados..: "<<endl<<endl;  
 	
@@ -26,16 +41,16 @@ int main()
 	}
 	
 	cout <<"Escolha o numero do remedio desejado..: "<<endl;
-	cin >> escolha;
+	cin >> carvalho.escolha;
 	
-	if (escolha > sizeof(remedio) / sizeof(remedio[0]))
+	if (carvalho.escolha > sizeof(remedio) / sizeof(remedio[0]))
 	
 	{
 		cout <<"Tas es doido, nao tem esse numero! " <<endl;
 	} 
 	else	
 	{
-		cout <<" Voce escolheu " << remedio[escolha] <<endl;
+		cout <<" Voce escolheu " << remedio[carvalho.escolha] <<endl;
 		cout<<"obrigado pela compra volte sempre! "<<endl;
 	}
 	
@@ -44,5 +59,3 @@ int main()
     
     return(0);
 }
-
-
