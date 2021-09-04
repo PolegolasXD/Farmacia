@@ -16,12 +16,6 @@ class farmacia
 };
 
 
-
-
-
-
-
-
 int main()
 
 { 
